@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css"
+        integrity="sha512-DIW4FkYTOxjCqRt7oS9BFO+nVOwDL4bzukDyDtMO7crjUZhwpyrWBFroq+IqRe6VnJkTpRAS6nhDvf0w+wHmxg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://r1.belheda.com/themes/restaurant/templates/tamplate2/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Livewire Styles -->
+    <style>
+        [wire\:loading][wire\:loading],
+        [wire\:loading\.delay][wire\:loading\.delay],
+        [wire\:loading\.inline-block][wire\:loading\.inline-block],
+        [wire\:loading\.inline][wire\:loading\.inline],
+        [wire\:loading\.block][wire\:loading\.block],
+        [wire\:loading\.flex][wire\:loading\.flex],
+        [wire\:loading\.table][wire\:loading\.table],
+        [wire\:loading\.grid][wire\:loading\.grid],
+        [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {
+            display: none;
+        }
+
+        [wire\:loading\.delay\.none][wire\:loading\.delay\.none],
+        [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest],
+        [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter],
+        [wire\:loading\.delay\.short][wire\:loading\.delay\.short],
+        [wire\:loading\.delay\.default][wire\:loading\.delay\.default],
+        [wire\:loading\.delay\.long][wire\:loading\.delay\.long],
+        [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer],
+        [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {
+            display: none;
+        }
+
+        [wire\:offline][wire\:offline] {
+            display: none;
+        }
+
+        [wire\:dirty]:not(textarea):not(input):not(select) {
+            display: none;
+        }
+
+        :root {
+            --livewire-progress-bar-color: #2299dd;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+
+        <div>
+            <div class="nav-bar">
+                <div style="display: flex; align-items: center; justify-content: center;gap:20px;">
+                    <a href="https://r1.belheda.com"
+                        style="text-decoration: none; color: #fff; padding: 5px 5px; border: 1px solid #333; border-radius: 5px; background-color: brown; transition: background-color 0.3s, box-shadow 0.3s; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);font-weight:700;">
+                        Back
+                    </a>
+                    <h6>LOGO</h6>
+
+                </div>
+
+
+                <div class="nav-items">
+                    <!--<p>Menu</p>-->
+                    <!--<p>About us</p>-->
+                    <!--<p>Services</p>-->
+                    <!--<p>News</p>-->
+                    <!--<p>Contact</p>-->
+
+                    <a href="#" id="pizzaAddCart" class="addCartButton"
+                        style="text-decoration: none; color: #fff; padding: 5px 5px; border: 1px solid #333; border-radius: 5px; background-color: brown; transition: background-color 0.3s, box-shadow 0.3s; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">Add
+                        Cart</a>
+                    <div style="margin-left: 10px;">
+                        Opening Time: 12:15 AM<br>
+                        Closing Time: 11:00 PM
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="header" style="background-image:url(http://r1.belheda.com/storage/72/12222.jpg)">
+                <div class="overlay">
+                    <h1></h1>
+
+                    <!--<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur veritatis deserunt sequi <br>-->
+                    <!--    praesentium nemo voluptatum eos eaque </p>-->
+                    <button data-bs-toggle="modal" data-bs-target="#booking-modal"
+                        style="padding: 12px 15px;background-color: rgb(235, 206, 21); color: black; font-weight: 700;border: none; font-size: 22px;border-radius:10px;border:1px solid black;">Book
+                        now</button>
+                </div>
+            </div>
+
+            <div class="section-1">
+
+                <div>
+                    <h3>TASTY FOOD SERVED WITH PLEASURE</h3>
+                </div>
+                <div class="section-1-items">
+                    <div wire:snapshot="{&quot;data&quot;:{&quot;categories_products&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;categories&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;other_products&quot;:[[[null,{&quot;class&quot;:&quot;App\\Models\\MenuItem&quot;,&quot;key&quot;:6,&quot;s&quot;:&quot;mdl&quot;}]],{&quot;s&quot;:&quot;arr&quot;}],&quot;restaurant&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\Restaurant&quot;,&quot;key&quot;:7,&quot;s&quot;:&quot;mdl&quot;}],&quot;menu_item&quot;:null,&quot;menu_id&quot;:0,&quot;variations&quot;:null,&quot;options&quot;:null,&quot;instructions&quot;:null,&quot;quantity&quot;:1,&quot;restaurant_id&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;cSHGQK8wJD8GzCREcQqK&quot;,&quot;name&quot;:&quot;restaurant-templates-show-page&quot;,&quot;path&quot;:&quot;branch01&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;795d4a19fb437bc2e02fe2a8327a06bb692430899cff48573b3d476f31e2d259&quot;}"
+                        wire:effects="[]" wire:id="cSHGQK8wJD8GzCREcQqK">
+                        <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+
+                        <!--[if BLOCK]><![endif]-->
+                        <div class="">
+                            <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+
+                            <!--[if BLOCK]><![endif]-->
+                            <div wire:ignore="" id="listing_product_other">
+                                <div class="product-category" id="popular-items">
+                                    <h3 class="product-category-title">others </h3>
+                                    <div class="product-card-groupp">
+                                        <div class="row gx-3 gy-3">
+                                            <!--[if BLOCK]><![endif]-->
+                                            <div class="col-md-6 ">
+                                                <div>
+
+                                                    <img src="https://r1.belheda.com/frontend/images/default/menuitem.png"
+                                                        alt="modal">
+                                                    <h4 href="#variation-6" wire:click.prevent="addToCartModal(6)">
+                                                        chiken nihari</h4>
+                                                    <p> yummy</p>
+                                                    <div class="product-card-info">
+                                                        <div class="product-card-price">
+                                                            <span>
+                                                                $250
+                                                            </span>
+                                                            <!--[if ENDBLOCK]><![endif]-->
+                                                        </div>
+
+
+                                                        <div class="ancher_tag">
+                                                            <a href="#variation-6"
+                                                                wire:click.prevent="addToCartModal(6)">Add</a>
+                                                            </a>
+                                                        </div>
+                                                        <!--[if ENDBLOCK]><![endif]-->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--[if ENDBLOCK]><![endif]-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--[if ENDBLOCK]><![endif]-->
+                        </div>
+                        <!--[if ENDBLOCK]><![endif]-->
+
+                        <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+
+                        <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!--<div class="footer">-->
+            <!--    <div>-->
+            <!--        <h3>LOGO</h3>-->
+            <!--    </div>-->
+            <!--    <div class="footer-content">-->
+            <!--        <p>Menu</p>-->
+            <!--        <p>About Us</p>-->
+            <!--        <p>Services</p>-->
+            <!--        <p>News</p>-->
+            <!--        <p>Contact Us</p>-->
+            <!--    </div>-->
+            <!--    <div class="footer-content">-->
+            <!--        <h3>SUBSCRIBE</h3>-->
+            <!--        <input type="text">-->
+            <!--        <div class="footer-icon">-->
+            <!--            <i class="fab fa-facebook"></i>-->
+            <!--            <i class="fab fa-twitter"></i>-->
+            <!--            <i class="fab fa-instagram"></i>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
+
+
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="cart-container">
+                    <div wire:snapshot="{&quot;data&quot;:{&quot;carts&quot;:[{&quot;items&quot;:[[[{&quot;id&quot;:6,&quot;name&quot;:&quot;chiken nihari&quot;,&quot;qty&quot;:3,&quot;price&quot;:250,&quot;delivery_charge&quot;:null,&quot;options&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;variation&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;discount&quot;:&quot;0.00&quot;,&quot;restaurant_id&quot;:7,&quot;images&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;image&quot;:&quot;https:\/\/r1.belheda.com\/frontend\/images\/default\/menuitem.png&quot;,&quot;menuItem_id&quot;:6,&quot;variationID&quot;:null,&quot;instructions&quot;:&quot;&quot;,&quot;totalPrice&quot;:750},{&quot;s&quot;:&quot;arr&quot;}]],{&quot;s&quot;:&quot;arr&quot;}],&quot;couponID&quot;:0,&quot;subTotalAmount&quot;:750,&quot;totalQty&quot;:3,&quot;totalPayAmount&quot;:750,&quot;totalAmount&quot;:750,&quot;delivery_charge&quot;:&quot;0&quot;,&quot;min_order&quot;:0,&quot;max_order&quot;:0,&quot;coupon_amount&quot;:0,&quot;delivery_type&quot;:null,&quot;free_delivery&quot;:null,&quot;table_id&quot;:null},{&quot;s&quot;:&quot;arr&quot;}],&quot;totalQty&quot;:3,&quot;totalItem&quot;:1,&quot;totalAmount&quot;:750,&quot;subTotalAmount&quot;:750,&quot;delivery_charge&quot;:&quot;0&quot;,&quot;totalPayAmount&quot;:750,&quot;restaurant&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\Restaurant&quot;,&quot;key&quot;:7,&quot;s&quot;:&quot;mdl&quot;}],&quot;totalItemQtyAmount&quot;:null,&quot;totalItemQty&quot;:null,&quot;qty&quot;:1,&quot;coupon&quot;:&quot;&quot;,&quot;discountAmount&quot;:0,&quot;min_order&quot;:0,&quot;max_order&quot;:0,&quot;msg&quot;:&quot;&quot;,&quot;couponID&quot;:0,&quot;delivery_type&quot;:null,&quot;free_delivery&quot;:null,&quot;table_id&quot;:null,&quot;isActive&quot;:false,&quot;isActiveCheckout&quot;:true},&quot;memo&quot;:{&quot;id&quot;:&quot;b4Qnxy68qtBkvX1O7iQj&quot;,&quot;name&quot;:&quot;restaurant-templates-order-cart&quot;,&quot;path&quot;:&quot;branch01&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;e1ddad36d0fb57b6bcaf86d4fca6d0bebf2df7e0151b580c1ff9977a5c31b613&quot;}"
+                        wire:effects="{&quot;listeners&quot;:[&quot;addCart&quot;],&quot;dispatches&quot;:[{&quot;name&quot;:&quot;showCartQty&quot;,&quot;params&quot;:[{&quot;qty&quot;:3}]}]}"
+                        wire:id="b4Qnxy68qtBkvX1O7iQj">
+                        <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+
+                        <!--[if BLOCK]><![endif]-->
+                        <div>
+                            <!--[if BLOCK]><![endif]--> <!--~~~~~~ WHEN CART IS ORDER CODE START ~~~~~~~~-->
+                            <h2 class="cart-title">My Cart
+                                (<span class="cartCount">
+                                    <!--[if BLOCK]><![endif]--> 3
+                                    <!--[if ENDBLOCK]><![endif]-->
+                                </span>)
+                            </h2>
+                            <div class="cart-scroll-group">
+
+
+                                <h3 class="cart-heading  ">
+                                    Your order from branch01
+                                </h3>
+
+
+
+                                <div style=div
+                                    style="display:flex; @media (max-width: 600px) { display: flex;flex-direction:column; }">
+
+                                    <div>
+                                        <div class="cart-items" id="cartItems">
+
+                                            <!--[if BLOCK]><![endif]-->
+                                            <div class="cart-item" data-product-id="0">
+                                                <div class="cart-item-details">
+                                                    <img src="https://r1.belheda.com/frontend/images/default/menuitem.png"
+                                                        alt="modal">
+                                                    <h3> chiken nihari</h3>
+                                                    <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+                                                    <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+                                                    <p><strong>Price:</strong> $<span class="price">$750 </span></p>
+                                                    <p><strong>Quantity:</strong>
+                                                    <div style="display:flex;">
+                                                        <button class="quantity-btn"
+                                                            wire:click.prevent="removeItemQty('0')">-</button>
+                                                        <input type="number" step=".01" wire:model="carts.items.0.qty"
+                                                            id="carts.items.0.qty" class="cart-counter-value"
+                                                            wire:keyup="changeEvent('0')" value="3" min="1" max="99">
+                                                        <button class="quantity-btn"
+                                                            wire:click.prevent="addItemQty('0')">+</button>
+                                                    </div>
+                                                    </p>
+                                                    <span class="delete-icon" wire:click.prevent="removeItem('0')"><i
+                                                            class="fas fa-trash-alt"></i></span>
+                                                    <span class="cart-item-remove"
+                                                        wire:click.prevent="removeItem('0')">Remove</span>
+                                                </div>
+                                            </div>
+                                            <!--[if ENDBLOCK]><![endif]-->
+
+                                        </div>
+                                    </div>
+                                    <div style="padding-bottom:150px;">
+                                        <div>
+                                            <!--[if BLOCK]><![endif]-->
+                                            <div class="deliver_type">
+                                                <div>
+                                                    Delivery
+                                                </div>
+                                                <div class="delivery_toglle">
+                                                    <label class="switch " style="color: #f91942 !important">
+                                                        <input type="checkbox" wire:model="isActive"
+                                                            wire:click="isUpdating">
+                                                        <span class="slider slider-color btn-top round"></span>
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                    Pickup
+                                                </div>
+                                            </div>
+                                            <!--[if ENDBLOCK]><![endif]-->
+
+                                        </div>
+                                        <div class="cart-price-group">
+                                            <!--[if BLOCK]><![endif]-->
+                                            <div class="cart-coupon m-0">
+                                                <input wire:ignore wire:key="coupon" type="text" wire:model="coupon"
+                                                    placeholder="Apply Coupon">
+                                                <button class="quantity-btn"
+                                                    wire:click.prevent="addCoupon()">Apply</button>
+                                            </div>
+                                            <span class="coupon-message fs-12 text-danger d-block mb-3 mt-2"></span>
+                                            <!--[if ENDBLOCK]><![endif]-->
+
+                                            <ul class="cart-amount-list">
+                                                <li class="cart-amount-item">
+                                                    <span>Subtotal:</span>
+                                                    <span>$750</span>
+                                                </li>
+
+                                                <!--[if BLOCK]><![endif]-->
+                                                <li class="cart-amount-item">
+                                                    <span>Delivery Charge:</span>
+                                                    <!--[if BLOCK]><![endif]--> <span>$0</span>
+                                                    <!--[if ENDBLOCK]><![endif]-->
+                                                </li>
+                                                <!--[if ENDBLOCK]><![endif]-->
+
+                                                <!--[if BLOCK]><![endif]-->
+                                                <li class="cart-amount-item">
+                                                    <span>Discount:</span>
+                                                    <span>$0 </span>
+                                                </li>
+                                                <!--[if ENDBLOCK]><![endif]-->
+
+                                                <li class="cart-amount-item">
+                                                    <span>Total:</span>
+                                                    <span>$750 </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cart-amount-btn-div">
+                                            <button class="quantity-btn" href="https://r1.belheda.com/checkout"
+                                                class="cart-amount-btn  btn-checkout " onclick="return true;">
+                                                Proceed to Checkout
+                                            </button>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!--~~~~~~  WHEN CART IS ORDER CODE END ~~~~~~~~~~~~-->
+                            <!--[if ENDBLOCK]><![endif]-->
+
+                        </div>
+                        <!--[if ENDBLOCK]><![endif]-->
+
+                        <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+
+                        <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div wire:snapshot="{&quot;data&quot;:{&quot;restaurant&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\Restaurant&quot;,&quot;key&quot;:7,&quot;s&quot;:&quot;mdl&quot;}],&quot;menuItem&quot;:null,&quot;quantity&quot;:1,&quot;menu_id&quot;:null,&quot;restaurant_id&quot;:null,&quot;variationID&quot;:null,&quot;options&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;instructions&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;tUw28QiYw6E6A1RArhSR&quot;,&quot;name&quot;:&quot;restaurant-templates-show-cart&quot;,&quot;path&quot;:&quot;branch01&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;5b3a3898abf264cf6e7e4c56a9cb3d77cd4d37da40277f80411ff87f83dbd13d&quot;}"
+            wire:effects="{&quot;listeners&quot;:[&quot;CartModal&quot;]}" wire:id="tUw28QiYw6E6A1RArhSR">
+            <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+
+            <!--[if BLOCK]><![endif]-->
+            <div>
+                <!--======= PRODUCT MODAL PART START ========-->
+
+                <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+                <!--======= PRODUCT MODAL PART END =====-->
+            </div>
+            <script>
+                // Function to toggle modal visibility
+                function toggleModal() {
+                    const modal = document.getElementById('cartModal');
+                    modal.classList.toggle('hidden');
+                }
+
+                // Close modal if clicked outside of the modal content
+                const modalOverlay = document.querySelector('.modal-overlay');
+                modalOverlay.addEventListener('click', toggleModal);
+            </script>
+            <!--[if ENDBLOCK]><![endif]-->
+
+            <!--[if BLOCK]><![endif]-->
+            <div>
+                <!--======= PRODUCT MODAL PART START ========-->
+
+                <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+                <!--======= PRODUCT MODAL PART END =====-->
+            </div>
+            <script>
+                // Function to toggle modal visibility
+                function toggleModal() {
+                    const modal = document.getElementById('cartModal');
+                    modal.classList.toggle('hidden');
+                }
+
+                // Close modal if clicked outside of the modal content
+                const modalOverlay = document.querySelector('.modal-overlay');
+                modalOverlay.addEventListener('click', toggleModal);
+            </script>
+            <!--[if ENDBLOCK]><![endif]-->
+
+            <!--[if BLOCK]><![endif]--> <!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+
+        <!--====== Table BOOKING MODAL START =========-->
+        <div class="modal fade " id="booking-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="booking-modal-header">
+                        <button class="fa-regular fa-circle-xmark" type="button" data-bs-dismiss="modal"></button>
+                        <h3 style="color:#fff;">Book Table </h3>
+                        <img src="https://r1.belheda.com/frontend/images/gif/table.gif" alt="gif" width="200">
+                    </div>
+
+                    <form action="https://r1.belheda.com/reservation/booking" method="GET">
+                        <input type="hidden" name="restaurant_id" id="restaurant_id" value="7">
+
+                        <div class="booking-modal-content">
+
+                            <div class="booking-modal-group">
+                                <div class="booking-modal-select">
+                                    <h4 style="color:#fff;"><span> Pick a Date </span>
+                                        <span class="dateshow">
+                                            05 Mar 2024
+                                        </span>
+                                    </h4>
+                                    <!--<i class="fa-solid fa-chevron-down"></i>-->
+                                </div>
+                                <div class="booking-modal-option">
+                                    <dl>
+                                        <dt style="color:#fff;">Choose your Date </dt>
+                                        <dd class="date">
+                                            <input style="border-radius:5px;padding:5px 10px;border:none;" type="date"
+                                                name="reservation_date" value="2024-03-05" id="datePick">
+                                        </dd>
+                                    </dl>
+                                    <button
+                                        style="text-decoration: none;font-weight:700; color: black; padding: 5px 5px; border: 1px solid #333; border-radius: 5px; background-color:  rgb(235, 206, 21); transition: background-color 0.3s, box-shadow 0.3s; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);"
+                                        class="done" type="button">Done </button>
+                                </div>
+                            </div>
+                            <div class="booking-modal-group">
+                                <div class="booking-modal-select">
+                                    <h4 style="color:#fff;"><span>Number of Guests </span>
+                                        <span class="guestQty guestotal d-inline">1</span>
+                                        <span class="d-inline guestQty">Guests </span>
+                                    </h4>
+                                    <!--<i class="fa-solid fa-chevron-down"></i>-->
+                                </div>
+                                <div class="booking-modal-option">
+                                    <dl>
+                                        <dt style="color:#fff;"> Choose Guests Number </dt>
+                                        <dd class="cart-counter">
+
+                                            <button
+                                                style="text-decoration: none;font-weight:700; color: black; padding: 5px 5px; border: 1px solid #333; border-radius: 5px; background-color:  rgb(235, 206, 21); transition: background-color 0.3s, box-shadow 0.3s; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);"
+                                                type="button" class=" qminus">-</button>
+                                            <input style="border-radius:5px;padding:5px 10px;border:none;" type="number"
+                                                name="qtyInput" value="1" id="qtyInput" class="cart-counter-value">
+                                            <button
+                                                style="text-decoration: none;font-weight:700; color: black; padding: 5px 5px; border: 1px solid #333; border-radius: 5px; background-color:  rgb(235, 206, 21); transition: background-color 0.3s, box-shadow 0.3s; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);"
+                                                type="button" class=" qplus">+</button>
+                                        </dd>
+                                    </dl>
+                                    <button
+                                        style="text-decoration: none;font-weight:700; color: black; padding: 5px 5px; border: 1px solid #333; border-radius: 5px; background-color:  rgb(235, 206, 21); transition: background-color 0.3s, box-shadow 0.3s; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);"
+                                        class="done plusMinusBtn" type="button">Done</button>
+                                </div>
+                            </div>
+                            <div class="booking-modal-time  ">
+                                <h4 style="color:#fff;">Pick a Time Slot</h4>
+
+                                <ul class="panel-dropdown-scrollable  reserveList" id="showTimeSlot">
+
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="booking-modal-footer">
+                            <button
+                                style="text-decoration: none;font-weight:700; color: black; padding: 10px 10px; border: 1px solid #333; border-radius: 5px; background-color:  rgb(235, 206, 21); transition: background-color 0.3s, box-shadow 0.3s; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);"
+                                type="submit" class="cart-btn">Request To Book </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!--====== Table BOOKING MODAL PART END ==========-->
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+        <script>
+            const reservationUrl = "https://r1.belheda.com/reservation/check";
+        </script>
+        <script src="https://r1.belheda.com/themes/restaurant/templates/tamplate2/index.js"></script>
+        <script src="https://r1.belheda.com/frontend/js/booking.js" type="text/javascript"></script>
+        <script src="https://r1.belheda.com/frontend/js/loader.js" type="text/javascript"></script>
+        <script>
+            function selected(id) {
+                const enable = document.querySelectorAll('.enable');
+                enable.forEach(box => {
+                    box.classList.remove('selected');
+                });
+                const slot = document.getElementById("slot_" + id);
+                slot.classList.add('selected');
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
+            integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    </div>
+    <!-- Livewire Scripts -->
+    <script src="/livewire/livewire.js?id=d38cabc2" data-csrf="GQPXOH06s87aL7Q4IrcwI803JB5n7nPJG87Tgfoa"
+        data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</body>
+
+</html>
